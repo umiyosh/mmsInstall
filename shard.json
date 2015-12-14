@@ -1,0 +1,469 @@
+{
+  "options": {
+    "downloadBase": "/var/lib/mongodb-mms-automation",
+    "downloadBaseWindows": "%SystemDrive%\\MMSAutomation\\versions"
+  },
+  "mongoDbVersions": [
+      {"name": "3.0.7"}
+  ],
+  "backupVersions": [
+      {
+          "hostname": "REPLACE",
+          "logPath": "/var/log/mongodb-mms-automation/backup-agent.log",
+          "logRotate": {
+              "sizeThresholdMB": 1000,
+              "timeThresholdHrs": 24
+          }
+      }
+  ],
+  "monitoringVersions": [
+      {
+          "hostname": "REPLACE",
+          "logPath": "/var/log/mongodb-mms-automation/monitoring-agent.log",
+          "logRotate": {
+              "sizeThresholdMB": 1000,
+              "timeThresholdHrs": 24
+          }
+      }
+  ],
+  "processes": [
+    {
+      "args2_6": {
+        "net": {
+          "bindIp": "0.0.0.0",
+          "port": 27000
+        },
+        "operationProfiling": {},
+        "replication": {
+          "replSetName": "repl_0"
+        },
+        "storage": {
+          "dbPath": "/data/mmstest_repl_0_182",
+          "engine": "wiredTiger",
+          "wiredTiger": {
+            "engineConfig": {
+              "cacheSizeGB": 21
+            }
+          }
+        },
+        "systemLog": {
+          "destination": "file",
+          "path": "/data/mmstest_repl_0_182/mongodb.log"
+        }
+      },
+      "authSchemaVersion": 5,
+      "hostname": "REPLACE",
+      "logRotate": {
+        "sizeThresholdMB": 1000,
+        "timeThresholdHrs": 24
+      },
+      "name": "mmstest_repl_0_182",
+      "processType": "mongod",
+      "version": "3.0.7"
+    },
+    {
+      "args2_6": {
+        "net": {
+          "bindIp": "0.0.0.0",
+          "port": 27000
+        },
+        "operationProfiling": {},
+        "replication": {
+          "replSetName": "repl_1"
+        },
+        "storage": {
+          "dbPath": "/data/mmstest_repl_1_183",
+          "engine": "wiredTiger",
+          "wiredTiger": {
+            "engineConfig": {
+              "cacheSizeGB": 21
+            }
+          }
+        },
+        "systemLog": {
+          "destination": "file",
+          "path": "/data/mmstest_repl_1_183/mongodb.log"
+        }
+      },
+      "authSchemaVersion": 5,
+      "hostname": "REPLACE",
+      "logRotate": {
+        "sizeThresholdMB": 1000,
+        "timeThresholdHrs": 24
+      },
+      "name": "mmstest_repl_1_183",
+      "processType": "mongod",
+      "version": "3.0.7"
+    },
+    {
+      "alias": "mmstest-mongoc-01.umiyosh.com",
+      "args2_6": {
+        "net": {
+          "bindIp": "0.0.0.0",
+          "port": 27019
+        },
+        "operationProfiling": {},
+        "sharding": {
+          "clusterRole": "configsvr"
+        },
+        "storage": {
+          "dbPath": "/data/mmstest_config_187"
+        },
+        "systemLog": {
+          "destination": "file",
+          "path": "/data/mmstest_config_187/mongodb.log"
+        }
+      },
+      "authSchemaVersion": 5,
+      "hostname": "REPLACE",
+      "logRotate": {
+        "sizeThresholdMB": 1000,
+        "timeThresholdHrs": 24
+      },
+      "name": "mmstest_config_187",
+      "processType": "mongod",
+      "version": "3.0.7"
+    },
+    {
+      "alias": "mmstest-mongoc-02.umiyosh.com",
+      "args2_6": {
+        "net": {
+          "bindIp": "0.0.0.0",
+          "port": 27019
+        },
+        "operationProfiling": {},
+        "sharding": {
+          "clusterRole": "configsvr"
+        },
+        "storage": {
+          "dbPath": "/data/mmstest_config_188"
+        },
+        "systemLog": {
+          "destination": "file",
+          "path": "/data/mmstest_config_188/mongodb.log"
+        }
+      },
+      "authSchemaVersion": 5,
+      "hostname": "REPLACE",
+      "logRotate": {
+        "sizeThresholdMB": 1000,
+        "timeThresholdHrs": 24
+      },
+      "name": "mmstest_config_188",
+      "processType": "mongod",
+      "version": "3.0.7"
+    },
+    {
+      "alias": "mmstest-mongoc-03.umiyosh.com",
+      "args2_6": {
+        "net": {
+          "bindIp": "0.0.0.0",
+          "port": 27019
+        },
+        "operationProfiling": {},
+        "sharding": {
+          "clusterRole": "configsvr"
+        },
+        "storage": {
+          "dbPath": "/data/mmstest_config_189"
+        },
+        "systemLog": {
+          "destination": "file",
+          "path": "/data/mmstest_config_189/mongodb.log"
+        }
+      },
+      "authSchemaVersion": 5,
+      "hostname": "REPLACE",
+      "logRotate": {
+        "sizeThresholdMB": 1000,
+        "timeThresholdHrs": 24
+      },
+      "name": "mmstest_config_189",
+      "processType": "mongod",
+      "version": "3.0.7"
+    },
+    {
+      "args2_6": {
+        "net": {
+          "bindIp": "0.0.0.0",
+          "port": 27017
+        },
+        "operationProfiling": {},
+        "systemLog": {
+          "destination": "file",
+          "path": "/data/mmstest_mongos_190/mongodb.log"
+        }
+      },
+      "authSchemaVersion": 5,
+      "cluster": "mmstest",
+      "hostname": "REPLACE",
+      "logRotate": {
+        "sizeThresholdMB": 1000,
+        "timeThresholdHrs": 24
+      },
+      "name": "mmstest_mongos_190",
+      "processType": "mongos",
+      "version": "3.0.7"
+    },
+    {
+      "args2_6": {
+        "net": {
+          "bindIp": "0.0.0.0",
+          "port": 27017
+        },
+        "operationProfiling": {},
+        "systemLog": {
+          "destination": "file",
+          "path": "/data/mmstest_mongos_191/mongodb.log"
+        }
+      },
+      "authSchemaVersion": 5,
+      "cluster": "mmstest",
+      "hostname": "REPLACE",
+      "logRotate": {
+        "sizeThresholdMB": 1000,
+        "timeThresholdHrs": 24
+      },
+      "name": "mmstest_mongos_191",
+      "processType": "mongos",
+      "version": "3.0.7"
+    },
+    {
+      "args2_6": {
+        "net": {
+          "bindIp": "0.0.0.0",
+          "port": 27000
+        },
+        "operationProfiling": {},
+        "replication": {
+          "replSetName": "repl_0"
+        },
+        "setParameter": {
+          "cursorTimeoutMillis": "3600000"
+        },
+        "storage": {
+          "dbPath": "/data/repl_0_192",
+          "engine": "wiredTiger",
+          "wiredTiger": {
+            "engineConfig": {
+              "cacheSizeGB": 21
+            }
+          }
+        },
+        "systemLog": {
+          "destination": "file",
+          "path": "/data/repl_0_192/mongodb.log"
+        }
+      },
+      "authSchemaVersion": 5,
+      "hostname": "REPLACE",
+      "logRotate": {
+        "sizeThresholdMB": 1000,
+        "timeThresholdHrs": 24
+      },
+      "name": "repl_0_192",
+      "processType": "mongod",
+      "version": "3.0.7"
+    },
+    {
+      "args2_6": {
+        "net": {
+          "bindIp": "0.0.0.0",
+          "port": 27000
+        },
+        "operationProfiling": {},
+        "replication": {
+          "replSetName": "repl_0"
+        },
+        "setParameter": {
+          "cursorTimeoutMillis": "3600000"
+        },
+        "storage": {
+          "dbPath": "/data/repl_0_193",
+          "engine": "wiredTiger",
+          "wiredTiger": {
+            "engineConfig": {
+              "cacheSizeGB": 21
+            }
+          }
+        },
+        "systemLog": {
+          "destination": "file",
+          "path": "/data/repl_0_193/mongodb.log"
+        }
+      },
+      "authSchemaVersion": 5,
+      "hostname": "REPLACE",
+      "logRotate": {
+        "sizeThresholdMB": 1000,
+        "timeThresholdHrs": 24
+      },
+      "name": "repl_0_193",
+      "processType": "mongod",
+      "version": "3.0.7"
+    },
+    {
+      "args2_6": {
+        "net": {
+          "bindIp": "0.0.0.0",
+          "port": 27000
+        },
+        "operationProfiling": {},
+        "replication": {
+          "replSetName": "repl_1"
+        },
+        "setParameter": {
+          "cursorTimeoutMillis": "3600000"
+        },
+        "storage": {
+          "dbPath": "/data/repl_1_194",
+          "engine": "wiredTiger",
+          "wiredTiger": {
+            "engineConfig": {
+              "cacheSizeGB": 21
+            }
+          }
+        },
+        "systemLog": {
+          "destination": "file",
+          "path": "/data/repl_1_194/mongodb.log"
+        }
+      },
+      "authSchemaVersion": 5,
+      "hostname": "REPLACE",
+      "logRotate": {
+        "sizeThresholdMB": 1000,
+        "timeThresholdHrs": 24
+      },
+      "name": "repl_1_194",
+      "processType": "mongod",
+      "version": "3.0.7"
+    },
+    {
+      "args2_6": {
+        "net": {
+          "bindIp": "0.0.0.0",
+          "port": 27001
+        },
+        "operationProfiling": {},
+        "replication": {
+          "replSetName": "repl_1"
+        },
+        "setParameter": {
+          "cursorTimeoutMillis": "3600000"
+        },
+        "storage": {
+          "dbPath": "/data/repl_1_195",
+          "engine": "wiredTiger",
+          "wiredTiger": {
+            "engineConfig": {
+              "cacheSizeGB": 21
+            }
+          }
+        },
+        "systemLog": {
+          "destination": "file",
+          "path": "/data/repl_1_195/mongodb.log"
+        }
+      },
+      "authSchemaVersion": 5,
+      "hostname": "REPLACE",
+      "logRotate": {
+        "sizeThresholdMB": 1000,
+        "timeThresholdHrs": 24
+      },
+      "name": "repl_1_195",
+      "processType": "mongod",
+      "version": "3.0.7"
+    }
+  ],
+  "replicaSets": [
+    {
+      "_id": "repl_0",
+      "members": [
+        {
+          "_id": 0,
+          "arbiterOnly": false,
+          "hidden": false,
+          "host": "mmstest_repl_0_182",
+          "priority": 2,
+          "slaveDelay": 0,
+          "votes": 1
+        },
+        {
+          "_id": 1,
+          "arbiterOnly": false,
+          "hidden": false,
+          "host": "repl_0_192",
+          "priority": 1,
+          "slaveDelay": 0,
+          "votes": 1
+        },
+        {
+          "_id": 2,
+          "arbiterOnly": true,
+          "hidden": false,
+          "host": "repl_0_193",
+          "priority": 0,
+          "slaveDelay": 0,
+          "votes": 1
+        }
+      ]
+    },
+    {
+      "_id": "repl_1",
+      "members": [
+        {
+          "_id": 0,
+          "arbiterOnly": false,
+          "hidden": false,
+          "host": "mmstest_repl_1_183",
+          "priority": 2,
+          "slaveDelay": 0,
+          "votes": 1
+        },
+        {
+          "_id": 1,
+          "arbiterOnly": false,
+          "hidden": false,
+          "host": "repl_1_194",
+          "priority": 1,
+          "slaveDelay": 0,
+          "votes": 1
+        },
+        {
+          "_id": 2,
+          "arbiterOnly": true,
+          "hidden": false,
+          "host": "repl_1_195",
+          "priority": 0,
+          "slaveDelay": 0,
+          "votes": 1
+        }
+      ]
+    }
+  ],
+  "sharding": [
+    {
+      "collections": [],
+      "configServer": [
+        "mmstest_config_187",
+        "mmstest_config_188",
+        "mmstest_config_189"
+      ],
+      "name": "mmstest",
+      "shards": [
+        {
+          "_id": "repl_0",
+          "rs": "repl_0",
+          "tags": []
+        },
+        {
+          "_id": "repl_1",
+          "rs": "repl_1",
+          "tags": []
+        }
+      ]
+    }
+  ]
+}
